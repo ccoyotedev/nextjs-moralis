@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  src: url('../assets/fonts/AGaramondPro-Bold.eot');
+  src: url('../assets/fonts/AGaramondPro-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/AGaramondPro-Bold.woff2') format('woff2'),
+      url('../assets/fonts/AGaramondPro-Bold.woff') format('woff'),
+      url('../assets/fonts/AGaramondPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  src: url('../assets/fonts/AGaramondPro-Italic.eot');
+  src: url('../assets/fonts/AGaramondPro-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/AGaramondPro-Italic.woff2') format('woff2'),
+      url('../assets/fonts/AGaramondPro-Italic.woff') format('woff'),
+      url('../assets/fonts/AGaramondPro-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  src: url('../assets/fonts/AGaramondPro-BoldItalic.eot');
+  src: url('../assets/fonts/AGaramondPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/AGaramondPro-BoldItalic.woff2') format('woff2'),
+      url('../assets/fonts/AGaramondPro-BoldItalic.woff') format('woff'),
+      url('../assets/fonts/AGaramondPro-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  src: url('../assets/fonts/AGaramondPro-Regular.eot');
+  src: url('../assets/fonts/AGaramondPro-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/AGaramondPro-Regular.woff2') format('woff2'),
+      url('../assets/fonts/AGaramondPro-Regular.woff') format('woff'),
+      url('../assets/fonts/AGaramondPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FrutigerCE';
+  src: url('../assets/fonts/FrutigerCE-LightItalic.eot');
+  src: url('../assets/fonts/FrutigerCE-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/FrutigerCE-LightItalic.woff2') format('woff2'),
+      url('../assets/fonts/FrutigerCE-LightItalic.woff') format('woff'),
+      url('../assets/fonts/FrutigerCE-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FrutigerCE';
+  src: url('../assets/fonts/FrutigerCE-Light.eot');
+  src: url('../assets/fonts/FrutigerCE-Light.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/FrutigerCE-Light.woff2') format('woff2'),
+      url('../assets/fonts/FrutigerCE-Light.woff') format('woff'),
+      url('../assets/fonts/FrutigerCE-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FrutigerCE';
+  src: url('../assets/fonts/FrutigerCE-BlackItalic.eot');
+  src: url('../assets/fonts/FrutigerCE-BlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/FrutigerCE-BlackItalic.woff2') format('woff2'),
+      url('../assets/fonts/FrutigerCE-BlackItalic.woff') format('woff'),
+      url('../assets/fonts/FrutigerCE-BlackItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FrutigerCE';
+  src: url('../assets/fonts/FrutigerCE-Black.eot');
+  src: url('../assets/fonts/FrutigerCE-Black.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/FrutigerCE-Black.woff2') format('woff2'),
+      url('../assets/fonts/FrutigerCE-Black.woff') format('woff'),
+      url('../assets/fonts/FrutigerCE-Black.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FrutigerCE';
+  src: url('../assets/fonts/FrutigerCE-Italic.eot');
+  src: url('../assets/fonts/FrutigerCE-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/FrutigerCE-Italic.woff2') format('woff2'),
+      url('../assets/fonts/FrutigerCE-Italic.woff') format('woff'),
+      url('../assets/fonts/FrutigerCE-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FrutigerCE';
+  src: url('../assets/fonts/FrutigerCE-UltraBlack.eot');
+  src: url('../assets/fonts/FrutigerCE-UltraBlack.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/FrutigerCE-UltraBlack.woff2') format('woff2'),
+      url('../assets/fonts/FrutigerCE-UltraBlack.woff') format('woff'),
+      url('../assets/fonts/FrutigerCE-UltraBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FrutigerCE';
+  src: url('../assets/fonts/FrutigerCE-Roman.eot');
+  src: url('../assets/fonts/FrutigerCE-Roman.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/FrutigerCE-Roman.woff2') format('woff2'),
+      url('../assets/fonts/FrutigerCE-Roman.woff') format('woff'),
+      url('../assets/fonts/FrutigerCE-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
