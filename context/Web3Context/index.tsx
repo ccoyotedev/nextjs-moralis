@@ -7,12 +7,12 @@ const Web3Context = createContext<{
   dispatch: React.Dispatch<Action>;
 }>({ state: initialState, dispatch: () => null });
 
-const updateWeb3 = async (dispatch: React.Dispatch<Action>, moralis: any) => {
+const updateNetworkId = async (dispatch: React.Dispatch<Action>, web3: any) => {
   dispatch({ type: "START_ASYNC" });
   try {
-    const web3 = await moralis.Web3.enable();
-    dispatch({ type: "SET_WEB3", web3 });
+    console.log(web3.eth);
     const networkId = await web3.eth.net.getId();
+    console.log(networkId);
     dispatch({ type: "SET_NETWORK_ID", networkId });
     dispatch({ type: "END_ASYNC" });
   } catch (error) {
@@ -33,4 +33,4 @@ const Web3ContextProvider = ({ children }: { children: React.ReactNode }) => {
 const useWeb3 = () => useContext(Web3Context);
 
 export default Web3ContextProvider;
-export { useWeb3, updateWeb3 };
+export { useWeb3, updateNetworkId };

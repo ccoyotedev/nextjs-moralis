@@ -1,25 +1,27 @@
 import React,{ useState } from 'react';
 import * as Styled from "./styles";
-import { useAuth } from 'hooks/useAuth';
+import { useMoralis } from 'react-moralis';
 import Jazzicon, { jsNumberForAddress } from 'react-jazzicon';
 import { smartTrim, networkIdToName } from 'utils';
 import { useWeb3 } from "context/Web3Context";
 import { useEffect } from 'react';
 
 export const ConnectButton = () => {
-  const { state: { networkId } } = useWeb3();
-  const { currentUser, login, logout } = useAuth();
-  const [ user, setUser ] = useState(currentUser());
+  const { state: { networkId, loading } } = useWeb3();
+  const { authenticate, user, logout } = useMoralis();
   const [ networkName, setNetworkName ] = useState("")
 
   const handleLogin = async () => {
-    await login();
-    setUser(currentUser())
+    await authenticate();
   }
 
   const handleLogout = async () => {
     await logout();
-    setUser(currentUser())
+  }
+
+  const handleClick = () => {
+    if (!user) handleLogin();
+    if (!loading) handleLogout();
   }
 
   useEffect(() => {
@@ -28,22 +30,19 @@ export const ConnectButton = () => {
     }
   }, [networkId])
 
-  if (!user) {
-    return (
-      <Styled.ConnectButton onClick={() => handleLogin()}>
-        Connect
-      </Styled.ConnectButton>
-    )
-  }
   return (
-    <Styled.Button onClick={() => handleLogout()}>
-      <Jazzicon diameter={26} seed={jsNumberForAddress(user.attributes.accounts[0])} />
-      <Styled.ConnectedDetails>
-        <p>{networkName}</p>
-        <p>
-          {smartTrim(user.attributes.accounts[0], 8)}
-        </p>
-      </Styled.ConnectedDetails>
-    </Styled.Button>
+    <Styled.ConnectButton onClick={handleClick} state={loading ? "loading" : !user ? "logged_out" : "logged_in"}>
+      {loading ? "Loading" : !user ? "Connect" : (
+        <>
+          <Jazzicon diameter={26} seed={jsNumberForAddress(user.attributes.accounts[0])} />
+          <Styled.ConnectedDetails>
+            <p>{networkName}</p>
+            <p>
+              {smartTrim(user.attributes.accounts[0], 8)}
+            </p>
+          </Styled.ConnectedDetails>
+        </>
+      )}
+    </Styled.ConnectButton>
   )
 }

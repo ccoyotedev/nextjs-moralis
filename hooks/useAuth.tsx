@@ -1,11 +1,11 @@
-import { useMoralis } from "./useMoralis";
+import { useMoralis } from 'react-moralis';
 
 export function useAuth() {
-  const { Moralis } = useMoralis();
+  const { authenticate, user, logout } = useMoralis();
   return {
     login: async () => {
       try {
-        await Moralis?.Web3.authenticate();
+        await authenticate();
       } catch (e) {
         console.error(e.message, e);
       }
@@ -13,14 +13,15 @@ export function useAuth() {
 
     logout: async () => {
       try {
-        await Moralis?.User.logOut();
+        await logout();
       } catch (e) {
         console.error(e.message, e);
       }
     },
 
     currentUser: () => {
-      return Moralis?.User.current();
+      console.log(user);
+      return user;
     },
   };
 }

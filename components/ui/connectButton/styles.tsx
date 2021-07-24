@@ -1,32 +1,36 @@
 import { styled } from 'theme';
+import { css } from 'styled-components';
 
-export const ConnectButton = styled.button`
+export const ConnectButton = styled.button<{ state: "loading" | "logged_in" | "logged_out" }>`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.2rem 0.6rem;
-  background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 0.4rem;
-  color: ${({ theme }) => theme.colors.light0};
-  cursor: pointer;
   border: none;
   min-height: 4.4rem;
   min-width: 11.7rem;
-  border: 1px solid ${({ theme }) => theme.colors.primary};
-  transition: border-color 200ms ease;
-
-  &:hover {
-    border-color: ${({ theme }) => theme.colors.secondary};
-  }
-`
-
-export const Button = styled(ConnectButton)`
+  border: 1px solid ${({ theme }) => theme.colors.dark2};
+  transition: all 300ms ease;
   background-color: ${({ theme }) => theme.colors.dark2};
   color: ${({ theme }) => theme.colors.dark0};
-  border-color: ${({ theme }) => theme.colors.dark0};
 
-  &:hover {
-    border-color: 1px solid ${({ theme }) => theme.colors.secondary};
+  ${({ state }) => state === "logged_in"
+    ? css`
+        cursor: pointer;
+
+        &:hover {
+          border-color: ${({ theme }) => theme.colors.secondary};
+        }
+      `
+    : css`
+        cursor: pointer;
+        background-color: ${({ theme }) => theme.colors.primary};
+        color: ${({ theme }) => theme.colors.light0};
+        &:hover {
+          border-color: ${({ theme }) => theme.colors.secondary};
+        }
+      `
   }
 `
 

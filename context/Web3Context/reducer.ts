@@ -2,10 +2,6 @@ import { State } from "./initialState";
 
 export type Action =
   | {
-      type: "SET_WEB3";
-      web3: State["web3"];
-    }
-  | {
       type: "START_ASYNC";
     }
   | {
@@ -22,12 +18,6 @@ export type Action =
 
 export const reducer = (state: State, action: Action) => {
   switch (action.type) {
-    case "SET_WEB3": {
-      return {
-        ...state,
-        web3: action.web3,
-      };
-    }
     case "START_ASYNC": {
       return {
         ...state,
