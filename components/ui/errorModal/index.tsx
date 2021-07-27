@@ -4,13 +4,14 @@ import { CustomError } from 'types'
 
 interface Props {
   error: CustomError;
+  onHandleClose: () => void;
 }
 
-export const ErrorModal = ({ error }: Props) => {
+export const ErrorModal = ({ error, onHandleClose }: Props) => {
   return (
-    <Modal>
+    <Modal onHandleClose={() => onHandleClose()}>
       <h3>Status Code: {error.status || 400}</h3>
-      <h1>{error.message}</h1>
+      <h2>{error.message}</h2>
       <Styled.StackContainer>
         <p>
           {error.stack}

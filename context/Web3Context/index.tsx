@@ -10,9 +10,7 @@ const Web3Context = createContext<{
 const updateNetworkId = async (dispatch: React.Dispatch<Action>, web3: any) => {
   dispatch({ type: "START_ASYNC" });
   try {
-    console.log(web3.eth);
     const networkId = await web3.eth.net.getId();
-    console.log(networkId);
     dispatch({ type: "SET_NETWORK_ID", networkId });
     dispatch({ type: "END_ASYNC" });
   } catch (error) {

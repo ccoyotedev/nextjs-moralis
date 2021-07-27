@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Footer, Header } from 'components/sections'
 import { Container } from 'components/layout'
 import { updateNetworkId, useWeb3 } from 'context/Web3Context'
@@ -10,18 +10,27 @@ interface Props {
 }
 
 export const Layout = ({children}: Props) => {
-  const { web3 } = useMoralis();
+  const { web3, isWeb3Enabled, web3EnableError, enableWeb3 } = useMoralis();
   const { state: {error} , dispatch } = useWeb3();
 
-  useEffect(() => {
-    updateNetworkId(dispatch, web3);
-  }, [web3])
+  const handleCloseErrorModal = () => {
+    dispatch({
+      type: "SET_ERROR",
+      error: undefined,
+    })
+  }
 
-  console.log(error);
+  useEffect(() => {
+    if (isWeb3Enabled) {
+      updateNetworkId(dispatch, web3);
+    } else {
+      enableWeb3();
+    }
+  }, [isWeb3Enabled, web3])
 
   return (
     <>
-      {error && <ErrorModal error={error} />}
+      {(error || web3EnableError) && <ErrorModal error={error || web3EnableError} onHandleClose={handleCloseErrorModal} />}
       <Header />
       <Container>
         {children}

@@ -13,13 +13,23 @@ export const Wrapper = styled.div`
 `
 
 export const Modal = styled.div`
-  position: fixed;
+  position: relative;
   top: 5.4rem;
   margin: 0 3.2rem;
   max-width: ${({theme}) => `${theme.grid.container.maxWidth.sm}px`};
   width: 100%;
-  padding: 3.2rem;
+  height: fit-content;
+  padding: 5.6rem 3.2rem 3.2rem;
   border-radius: 0.4rem;
   background-color: ${({ theme }) => theme.colors.light1};
   box-shadow: ${({ theme }) => theme.shadow };
 `
+
+export const CloseIcon = styled.img`
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  cursor: pointer;
+`
+
+
