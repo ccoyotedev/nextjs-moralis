@@ -9,11 +9,11 @@ Using the [github client](https://cli.github.com/), in your command line run:
 gh repo create <my-web3-project> --template="https://github.com/ccoyotedev/nextjs-moralis.git"
 cd <my-web3-project>
 git pull origin main
+yarn install
 ```
 
 To run the app, in your terminal run:
 ```
-yarn install
 yarn develop
 ```
 
