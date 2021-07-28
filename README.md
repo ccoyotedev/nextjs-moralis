@@ -13,7 +13,6 @@ git pull origin main
 
 To run the app, in your terminal run:
 ```
-cd <minigame-project>/server
 yarn install
 yarn develop
 ```
