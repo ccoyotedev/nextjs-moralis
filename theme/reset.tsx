@@ -63,7 +63,7 @@ main {
 
 pre {
   font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-size: 1.2rem; /* 2 */
 }
 
 a {
@@ -87,7 +87,7 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-size: 1.4rem; /* 2 */
 }
 
 audio,

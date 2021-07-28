@@ -44,7 +44,8 @@ export const ConnectedDetails = styled.div`
   p {
     font-size: 1.2rem;
     text-align: right;
-    margin: 0
+    margin: 0;
+    color: ${({ theme }) => theme.colors.light0}
   }
   p:last-of-type {
     color: ${({ theme }) => theme.colors.light1}

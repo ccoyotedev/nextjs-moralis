@@ -30,7 +30,8 @@ export const Layout = ({children}: Props) => {
 
   return (
     <>
-      {(error || web3EnableError) && <ErrorModal error={error || web3EnableError} onHandleClose={handleCloseErrorModal} />}
+      {web3EnableError && <ErrorModal error={web3EnableError} />}
+      {error && <ErrorModal error={error} onHandleClose={handleCloseErrorModal} />}
       <Header />
       <Container>
         {children}

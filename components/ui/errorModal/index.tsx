@@ -1,22 +1,21 @@
-import * as Styled from './styles';
 import { Modal } from '../modal';
 import { CustomError } from 'types'
 
 interface Props {
   error: CustomError;
-  onHandleClose: () => void;
+  onHandleClose?: () => void;
 }
 
 export const ErrorModal = ({ error, onHandleClose }: Props) => {
   return (
-    <Modal onHandleClose={() => onHandleClose()}>
+    <Modal onHandleClose={onHandleClose ? () => onHandleClose() : undefined}>
       <h3>Status Code: {error.status || 400}</h3>
       <h2>{error.message}</h2>
-      <Styled.StackContainer>
-        <p>
+      <pre>
+        <code>
           {error.stack}
-        </p>
-      </Styled.StackContainer>
+        </code>
+      </pre>
     </Modal>
   )
 }

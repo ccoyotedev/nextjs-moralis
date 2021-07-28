@@ -68,8 +68,6 @@ const GlobalStyle = createGlobalStyle<{ theme: typeof theme }>`
     line-height: ${({ theme }): string => theme.font.p.lineHeight};
     font-weight: ${({ theme }): number => theme.font.p.weight};
     margin-bottom: 1.6rem;
-
-    color: ${({ theme }) => theme.colors.light0}
   }
 
   input,
@@ -92,6 +90,19 @@ const GlobalStyle = createGlobalStyle<{ theme: typeof theme }>`
     font-weight: ${({ theme }): number => theme.font.p.weight};
     color: ${({ theme }): string => theme.colors.primary};
     cursor: pointer;
+  }
+
+  pre {
+    background-color: ${({ theme }): string => theme.colors.dark2};
+    padding: 1.2rem;
+    white-space: pre-wrap;
+    max-height: 60rem;
+    overflow-y: scroll;
+
+    code {
+      color: ${({ theme }): string => theme.colors.light1};
+      line-height: 1.8rem;
+    }
   }
 `
 

@@ -33,8 +33,8 @@ export const theme = {
   },
 
   font: {
-    primary: "FrutigerCE, sans-serif",
-    secondary: "Adobe Garamond Pro, serif",
+    primary: "helvetica, sans-serif",
+    secondary: "garamond, serif",
     xl: {
       size: '6rem',
       lineHeight: '4rem',
