@@ -6,7 +6,7 @@ It is written primarily in Typescript and uses [styled components](https://style
 
 Using the [github client](https://cli.github.com/), in your command line run:
 ```
-gh repo create <my-web3-project> --template="https://github.com/ccoyotedev/nextjs-moralis"
+gh repo create <my-web3-project> --template="https://github.com/ccoyotedev/nextjs-moralis.git"
 cd <my-web3-project>
 git pull origin main
 ```
