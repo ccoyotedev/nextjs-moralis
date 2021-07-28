@@ -14,7 +14,7 @@ yarn install
 
 To run the app, in your terminal run:
 ```
-yarn develop
+yarn dev
 ```
 
 To connect to Moralis you will need to create a new Moralis project by following the [Moralis documentation]("https://docs.moralis.io/getting-started/quick-start").
